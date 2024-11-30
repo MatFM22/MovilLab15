@@ -1,6 +1,6 @@
-package com.aquino.matias.poketinder
+package com.aquino.matias.poketinder.ui.adapter
 
-import com.aquino.matias.poketinder.PokemonResponse
+import com.aquino.matias.poketinder.data.model.PokemonResponse
 import com.aquino.matias.poketinder.databinding.ItemPokemonBinding
 
 import android.view.LayoutInflater

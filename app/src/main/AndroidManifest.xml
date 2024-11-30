@@ -14,7 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PokeTinder"
         tools:targetApi="31">
-
         <!--
         <activity
             android:name=".RegisterActivity"
@@ -22,30 +21,34 @@
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
-         -->
-
+        -->
         <activity
-            android:name=".LoginActivity"
+            android:name=".ui.view.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!-- -->
+        </activity> <!--  -->
         <activity
-            android:name=".SplashActivity"
+            android:name=".ui.view.SplashActivity"
             android:exported="true" />
-
         <activity
-            android:name=".MainActivity"
-            android:exported="true" />
-
-        <!-- -->
+            android:name=".ui.view.MainActivity"
+            android:exported="true" /> <!--  -->
         <activity
-            android:name=".RegisterActivity"
+            android:name=".ui.view.RegisterActivity"
             android:exported="true" />
-
+        <activity
+            android:name=".ui.view.HomeFragment"
+            android:exported="true" />
+        <activity
+            android:name=".ui.view.FavoriteFragment"
+            android:exported="true" />
+        <activity
+            android:name=".ui.view.InfoFragment"
+            android:exported="true" />
     </application>
+
 </manifest>

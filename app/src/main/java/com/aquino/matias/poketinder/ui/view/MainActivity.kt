@@ -1,23 +1,23 @@
-package com.aquino.matias.poketinder
+package com.aquino.matias.poketinder.ui.view
 
+/*
 import android.os.Bundle
-import android.os.PersistableBundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import com.aquino.matias.poketinder.PokemonResponse
+import com.aquino.matias.poketinder.data.model.PokemonResponse
 import com.aquino.matias.poketinder.databinding.ActivityMainBinding
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
 import android.widget.Toast
 import androidx.core.view.isVisible
+import com.aquino.matias.poketinder.ui.viewmodel.HomeViewModel
+import com.aquino.matias.poketinder.ui.adapter.PokemonAdapter
+*/
+
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
+import com.aquino.matias.poketinder.R
+import com.aquino.matias.poketinder.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
@@ -92,13 +92,14 @@ class MainActivity : AppCompatActivity() {
     }
     */
 
+    /* este es el bueno ↓
     private var listPokemon: List<PokemonResponse> = emptyList()
 
     private val adapter by lazy { PokemonAdapter(listPokemon) }
 
     private lateinit var binding : ActivityMainBinding
 
-    private val viewModel by lazy { MainViewModel() }
+    private val viewModel by lazy { HomeViewModel() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -125,6 +126,19 @@ class MainActivity : AppCompatActivity() {
 
     private fun showMessage(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
+    */
+
+    private lateinit var binding : ActivityMainBinding
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        val navController = findNavController(R.id.nav_host_fragment)
+        binding.navView.setupWithNavController(navController)
     }
 
 }

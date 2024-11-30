@@ -1,4 +1,4 @@
-package com.aquino.matias.poketinder
+package com.aquino.matias.poketinder.data.model
 
 data class PokemonResponse(
     val name: String,

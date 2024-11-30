@@ -1,9 +1,10 @@
-package com.aquino.matias.poketinder
+package com.aquino.matias.poketinder.ui.view
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.aquino.matias.poketinder.data.database.SharedPreferencesRepository
 import com.aquino.matias.poketinder.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
